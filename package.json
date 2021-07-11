@@ -1,0 +1,16 @@
+{
+  "name": "git-workflows",
+  "version": "1.0.0",
+  "description": "git workflows poc",
+  "main": "main.js",
+  "scripts": {
+    "start":"node main.js",
+    "test": "mocha"
+  },
+  "author": "srinivas vykuntapu",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.2"
+  }
+}
