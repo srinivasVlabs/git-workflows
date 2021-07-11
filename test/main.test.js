@@ -10,6 +10,6 @@ describe("validator isString()", () => {
 	})
 
 	it("should return false when the number is passed", () => {
-		expect(validator.isString(10)).to.be.false
+		expect(validator.isString(10)).to.be.true
 	})
 })
