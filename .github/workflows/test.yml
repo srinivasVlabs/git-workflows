@@ -11,11 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./backend
 
     strategy:
       matrix:
@@ -31,7 +27,10 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
+      working-directory: ./backend
     - name: Run build if present
       run: npm run build --if-present
+      working-directory: ./backend
     - name: Test unit
       run: npm test
+      working-directory: ./backend
