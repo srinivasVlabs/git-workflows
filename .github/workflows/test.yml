@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,6 +25,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - name: Install dependencies
+      run: npm ci
+      working-directory: ./backend
+    - name: Run build if present
+      run: npm run build --if-present
+      working-directory: ./backend
+    - name: Test unit
+      run: npm test
+      working-directory: ./backend
