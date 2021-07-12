@@ -6,7 +6,7 @@ const validator = require('../main')
 describe("validator isString()", () => {
 
 	it("should return true if string is passed", ()=> {
-		expect(validator.isString('name')).to.be.true
+		expect(validator.isString('name')).to.be.false
 	})
 
 	it("should return false when the number is passed", () => {
